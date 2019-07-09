@@ -1,0 +1,20 @@
+<script>
+    function tekstje(){
+        var voornaam = document.getElementById("voornaam").value;
+        var achternaam = document.getElementById("achternaam").value;
+        var geboortedatum = document.getElementById("geboortedatum").value;
+        var fullName = voornaam + " " + achternaam;
+        
+        alert("Hey " + fullName + " jij bent geboren op " + geboortedatum);
+    }
+
+</script>
+
+<input type=text id=voornaam placeholder=Voornaam> 
+<br>
+<input type=text id=achternaam placeholder=Achternaam> 
+<br>
+<input type=text id=geboortedatum placeholder=Geboortedatum> 
+<br>
+<input type="button" onclick="tekstje()" value="Klik mij">
+<br>

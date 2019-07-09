@@ -1,0 +1,58 @@
+<script>
+
+var kleuren = ["green", "orange", "red"];
+var nummer = 0;
+
+function stoplicht() {
+    var licht = document.getElementById("rood");
+    rood.style.backgroundColor = kleuren[nummer]      
+    nummer = nummer + 1;                                
+    if(nummer > 2){                                    
+        nummer = 0;
+    }
+}
+
+// Hoe krijg ik de lichten om en om?
+
+
+var leeftijd = document.getElementById("tekstveld").value;
+            if(leeftijd >= 18){
+                var elem = document.getElementById("resultaat");
+                elem.style.backgroundColor = "green";
+            }
+            if(leeftijd >= 16 && leeftijd< 18){
+                var elem = document.getElementById("resultaat");
+                elem.style.backgroundColor = "orange";
+            }
+            if(leeftijd < 16){
+                var elem = document.getElementById("resultaat");
+                elem.style.backgroundColor = "red";
+            }
+</script>
+
+<table>
+    <tr>
+        <td class ="licht" id="rood">Rood</td>
+    </tr>
+    <tr>
+        <td class ="licht" id="oranje">Oranje</td>
+    </tr>
+    <tr>
+        <td class ="licht" id="groen">Groen</td>
+    </tr>
+</table>
+        
+<style>
+    table{
+        border-collapse: collapse;
+        width: 20%;
+    }
+    
+    td{
+        border: 2px solid black;
+        text-align:center;
+    }
+</style>
+
+<br>
+<input type=button value=Volgende onclick=stoplicht()>

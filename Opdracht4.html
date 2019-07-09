@@ -1,0 +1,45 @@
+<script>
+
+var prijzen = [1.19, 0.78, 1.49, 1.22, 2.55, 2.75, 1.69, 0.79, 1,59];
+var totaal = [];
+
+function count (x){
+    var y = 0
+    for (var i = 0; i < x.length; i++){
+        y = y + x[i]
+    }
+    return(y)
+}
+
+function optellen(prijs) {
+    totaal.push(prijzen[prijs]);
+
+    document.getElementById("totaal").innerHTML = "$ " + count(totaal)
+}
+
+</script>
+
+
+
+<h1>Appie Heijn</h1>
+
+<table>
+    <tr>
+        <td onclick = "optellen ([0])" id = "bananen">Bananen</td>
+        <td onclick = "optellen ([1])" id = "Crackers">Crackers</td>
+        <td onclick = "optellen ([2])" id = "Boter">Boter</td>
+    </tr>
+    <tr>
+        <td onclick = "optellen ([3])" id = "Brood">Brood</td>
+        <td onclick = "optellen ([4])" id = "Gehakt">Gehakt</td>
+        <td onclick = "optellen ([5])" id = "Pindakaas">Pindakaas</td>
+    </tr>
+    <tr>
+        <td onclick = "optellen ([6])" id = "Hagelslag">Hagelslag</td>
+        <td onclick = "optellen ([7])" id = "Broccoli">Broccoli</td>
+        <td onclick = "optellen ([8])" id = "Tandpasta">Tandpasta</td>
+    </tr>
+</table>
+<br>
+<div id="totaal">$ 0,00</div>
+<br>

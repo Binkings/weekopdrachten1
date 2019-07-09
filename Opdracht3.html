@@ -1,0 +1,44 @@
+<script>
+
+var boodschappen = [];
+
+function toevoegen(){
+    var ingredient = document.getElementById("ingredient").value;
+    var aantal = document.getElementById("aantal").value;
+    var lijstje = document.getElementById("lijstje");
+
+    boodschappen.push(ingredient + " " + aantal + "<br>");
+    lijstje.innerHTML = boodschappen;
+
+    for (var b = 0; b < boodschappen.length; b++) {
+        lijstje = boodschappen.concat(boodschappen);
+    }
+}
+
+function clearAll(){
+    boodschappen = [];
+    lijstje.innerHTML = boodschappen;
+}
+
+function appeltaart(){
+    document.getElementById("benodigdheden").innerHTML = 
+    "200 gram boter <br> 200 gram witte basterdsuiker <br> 400 gram zelfrijzend bakmeel <br> 1 ei <br> 8 gram vanillesuiker <br> snufje zout <br> 1,5 kilo zoetzure appels (ongeschild) <br> 75 gram kristalsuiker <br> 3 tl kaneel <br> 15 gram paneermeel";
+}
+</script>
+
+<style>
+
+
+
+</style>
+
+
+<h1>Boodschappenlijstje</h1>
+<input type="text" id="ingredient" placeholder="ingredient">
+<input type="text" id="aantal" placeholder="aantal">
+<input type="button" value="Toevoegen" onclick="toevoegen()">
+<input type="button" id="clearAll" value="Clear" onclick="clearAll()">
+<input type="button" id="appeltaart" value="Ingredienten voor appeltaart" onclick="appeltaart()">
+<br>
+<div id="lijstje"></div>
+<div id="benodigdheden"></div>
